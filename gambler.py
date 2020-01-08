@@ -32,7 +32,7 @@ class Gambler:
         # Old Q-table value
         old_value = self.q_table[action][old_state]
         # What would be our best next action?
-        future_action = self.greedy_action(new_state)
+        future_action = self.greedy_action(old_state)
         # What is reward for the best next action?
         future_reward = self.q_table[future_action][new_state]
 
